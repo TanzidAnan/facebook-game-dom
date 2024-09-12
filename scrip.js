@@ -25,6 +25,7 @@ postButton.addEventListener('click', () => {
         name:name.value,
         caption:caption.value
     })
+    allPost.innerHTML = " "
     display()
 })
 
