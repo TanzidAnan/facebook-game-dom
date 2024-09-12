@@ -1,4 +1,5 @@
-const allPost =document.querySelectorAll('.allPost')
+const allPost =document.querySelector('.allPost');
+    allPost.innerHTML="ht"
 let arr=[
     {
         name:'tanzid',
@@ -15,6 +16,13 @@ let arr=[
 ];
 
 arr.map(item =>{
-    console.log(item.name)
-    console.log(item.caption)
+    console.log()
+    allPost.innerHTML= `<div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">${item.name}</h5>
+                    <p class="card-text">${item.caption}</p>
+                    <a href="#" class="btn btn-primary">Edit</a>
+                    <a href="#" class="btn btn-danger">Delete</a>
+                </div>
+            </div>`
 })
