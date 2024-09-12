@@ -1,18 +1,33 @@
 const allPost = document.querySelector('.allPost');
-let arr = [
-    {
-        name: 'tanzid',
-        caption: 'Hello'
-    },
-    {
-        name: 'marzan',
-        caption: 'Hi'
-    },
-    {
-        name: 'Anan',
-        caption: 'Hi anan'
-    },
-];
+const name = document.querySelector('.name');
+const caption = document.querySelector('.caption');
+const postButton = document.querySelector('.postButton');
+// let arr = [
+//     {
+//         name: 'tanzid',
+//         caption: 'Hello'
+//     },
+//     {
+//         name: 'marzan',
+//         caption: 'Hi'
+//     },
+//     {
+//         name: 'Anan',
+//         caption: 'Hi anan'
+//     },
+// ];
+
+let arr = []
+
+
+postButton.addEventListener('click', () => {
+    arr.push({
+        name:name.value,
+        caption:caption.value
+    })
+    display()
+})
+
 
 function display() {
     arr.map(item => {
