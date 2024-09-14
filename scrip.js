@@ -21,12 +21,21 @@ let arr = []
 
 
 postButton.addEventListener('click', () => {
+    
     arr.push({
-        name:name.value,
-        caption:caption.value
+
+        name: name.value,
+        caption: caption.value
+
     })
+
+
+
+
     allPost.innerHTML = " "
-    display()
+    display();
+   name.value = '';
+   caption.value = '';
 })
 
 
@@ -38,8 +47,12 @@ function display() {
                         <h5 class="card-title">${item.name}</h5>
                         <p class="card-text">${item.caption}</p>
                         <a href="#" class="btn btn-primary">Edit</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
+                        <a href="#" class="btn btn-danger delete">Delete</a>
                     </div>
                 </div>`
+    })
+    let deleteButton = document.querySelector(".delete");
+    deleteButton.addEventListener("click",()=>{
+        console.log('delete button')
     })
 }
