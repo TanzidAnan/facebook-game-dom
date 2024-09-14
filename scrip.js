@@ -51,8 +51,13 @@ function display() {
                     </div>
                 </div>`
     })
-    let deleteButton = document.querySelector(".delete");
-    deleteButton.addEventListener("click",()=>{
-        console.log('delete button')
+    let deleteButton = document.querySelectorAll(".delete");
+    let converDeleteBtn =Array.from(deleteButton);
+    console.log(converDeleteBtn);
+    converDeleteBtn.map(item =>{
+        item.addEventListener('click',()=>{
+            console.log(2142121)
+        })
     })
+   console.log(deleteButton)
 }
