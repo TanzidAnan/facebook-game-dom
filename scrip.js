@@ -21,7 +21,7 @@ let arr = []
 
 
 postButton.addEventListener('click', () => {
-    
+
     arr.push({
 
         name: name.value,
@@ -34,8 +34,8 @@ postButton.addEventListener('click', () => {
 
     allPost.innerHTML = " "
     display();
-   name.value = '';
-   caption.value = '';
+    name.value = '';
+    caption.value = '';
 })
 
 
@@ -52,12 +52,15 @@ function display() {
                 </div>`
     })
     let deleteButton = document.querySelectorAll(".delete");
-    let converDeleteBtn =Array.from(deleteButton);
+    let converDeleteBtn = Array.from(deleteButton);
     console.log(converDeleteBtn);
-    converDeleteBtn.map(item =>{
-        item.addEventListener('click',()=>{
-            console.log(2142121)
+    converDeleteBtn.map((deleteBtn, index) => {
+        deleteBtn.addEventListener('click', () => {
+            arr.splice(index, 1);
+            allPost.innerHTML = " ";
+            display();
+
         })
     })
-   console.log(deleteButton)
+    console.log(deleteButton)
 }
